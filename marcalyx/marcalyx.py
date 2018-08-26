@@ -1,6 +1,6 @@
 import re
 
-NS = {'marc': 'http://www.loc.gov/MARC21/slim'}
+SLIM = {'marc': 'http://www.loc.gov/MARC21/slim'}
 class Record:
     def __init__(self, node):
         self.node = node
@@ -9,7 +9,7 @@ class Record:
         
         self.leader = self.get_leader(node, ns)
         self.fields = [ControlField(f) for f in self.find_control(node, ns)] + \
-                       [DataField(f) for f in self.find_data(node, ns)]
+                       [DataField(f, ns) for f in self.find_data(node, ns)]
 
     def get_namespace(self, node):
         ns_search = re.search('({(.+)})?.+', node.tag)
@@ -27,11 +27,11 @@ class Record:
             ns_str = 'marc:'
         else:
             ns_str = ''
-        return node.findall("%s%s" % (ns_str, tag,), NS)
+        return node.findall("%s%s" % (ns_str, tag,), SLIM)
             
 
     def find_control(self, node, ns):
-        return self.find_with_ns(node, 'controlfield', ns)
+        return self.find_with_ns(node, 'controlfield', SLIM)
 
 
     def find_data(self, node, ns):
@@ -42,6 +42,9 @@ class Record:
         leader = self.find_with_ns(node, 'leader', ns)
         return leader[0].text
 
+
+    def mainEntry(self):
+        return next(iter(self.tag_range("100", "1XX") or []), None)
     
     def titleStatement(self):
         return self.field('245')[0]
@@ -55,6 +58,10 @@ class Record:
         return [g for h in
                 [f.subfield(code) for f in self.field(tag)]
                 for g in h]
+
+    
+    def tag_range(self, first, last):
+        return [f for f in self.fields if f.tag >= first and f.tag <= last]
 
 
     def __getitem__(self, tag):
@@ -73,14 +80,21 @@ class ControlField:
 
 
 class DataField:
-    def __init__(self, node):
+    def __init__(self, node, ns):
         self.node = node
         self.tag = node.attrib['tag']
         self.ind1 = node.attrib['ind1']
         self.ind2 = node.attrib['ind2']
         self.subfields = [SubField(s) for s in
-                          node.findall('marc:subfield', NS)]
+                          self.find_with_ns(node, 'subfield', ns)]
 
+
+    def find_with_ns(self, node, tag, ns):
+        if ns:
+            ns_str = 'marc:'
+        else:
+            ns_str = ''
+        return node.findall("%s%s" % (ns_str, tag,), SLIM)
 
     def subfield(self, code):
         return [s for s in self.subfields if s.code == code]

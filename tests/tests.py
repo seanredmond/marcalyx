@@ -9,6 +9,13 @@ def kindred():
     return marcalyx.Record(root)
 
 
+@pytest.fixture()
+def quilt():
+    tree = ET.parse('tests/xml/10705.xml')
+    root = tree.getroot()
+    return marcalyx.Record(root)
+
+
 def test_leader(kindred):
     assert kindred.leader == '00000cam a2200000Mi 4500'
 
@@ -56,6 +63,7 @@ def test_getting_control_and_data_fields(kindred):
     assert isinstance(kindred['001'][0], marcalyx.marcalyx.ControlField)
     assert isinstance(kindred['245'][0], marcalyx.marcalyx.DataField)
 
+
 def test_title_statement(kindred):
     assert str(kindred.titleStatement()) == \
         '245 10$aKindred /$cOctavia E. Butler.'
@@ -63,3 +71,14 @@ def test_title_statement(kindred):
 
 def test_datafield_value(kindred):
     assert kindred.titleStatement().value() == 'Kindred / Octavia E. Butler.'
+
+
+def test_main_entry(kindred, quilt):
+    k = kindred.mainEntry()
+    q = quilt.mainEntry()
+
+    assert isinstance(k, marcalyx.marcalyx.DataField)
+    assert k.tag == '100'
+
+    assert isinstance(q, marcalyx.marcalyx.DataField)
+    assert q.tag == '111'
