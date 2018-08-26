@@ -150,6 +150,7 @@ class ControlField:
         self.node = node
         self.tag = node.attrib['tag']
         self.value = node.text
+        self.subfields = []
 
     def __repr__(self):
         return "%s   %s" % (self.tag, self.value,)
