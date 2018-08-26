@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record>
+  <leader>00842cam a22002534a 4500</leader>
+  <controlfield tag="001">   00053998 </controlfield>
+  <controlfield tag="003">DLC</controlfield>
+  <controlfield tag="005">20021115155717.0</controlfield>
+  <controlfield tag="008">001114s2001    njub     b    001 0 eng  </controlfield
+  >
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">   00053998 </subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">1572733683</subfield>
+  </datafield>
+  <datafield tag="022" ind1=" " ind2=" ">
+    <subfield code="a">1572733691 (pbk.)</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">DLC</subfield>
+    <subfield code="c">DLC</subfield>
+    <subfield code="d">DLC</subfield>
+  </datafield>
+  <datafield tag="042" ind1=" " ind2=" ">
+    <subfield code="a">pcc</subfield>
+  </datafield>
+  <datafield tag="050" ind1="0" ind2="0">
+    <subfield code="a">P96.L62</subfield>
+    <subfield code="b">R63 2001</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="0">
+    <subfield code="a">302.23/07/22</subfield>
+    <subfield code="2">21</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Rodríguez, Clemencia.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Fissures in the mediascape :</subfield>
+    <subfield code="b">an international study of citizens&apos; media /</subfield>
+    <subfield code="c">Clemencia Rodriguez.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Cresskill, N.J. :</subfield>
+    <subfield code="b">Hampton Press,</subfield>
+    <subfield code="c">c2001.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">xxi, 224 p. :</subfield>
+    <subfield code="b">maps ;</subfield>
+    <subfield code="c">24 cm.</subfield>
+  </datafield>
+  <datafield tag="440" ind1=" " ind2="4">
+    <subfield code="a">The Hampton Press communication series</subfield>
+  </datafield>
+  <datafield tag="504" ind1=" " ind2=" ">
+    <subfield code="a">Includes bibliographical references (p. 181-200) and indexes.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Local mass media</subfield>
+    <subfield code="v">Case studies.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Ethnic mass media</subfield>
+    <subfield code="v">Case studies.</subfield>
+  </datafield>
+</record>    

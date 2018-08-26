@@ -50,6 +50,13 @@ def xenophon():
     return marcalyx.Record(root)
 
 
+@pytest.fixture()
+def fissures():
+    tree = ET.parse('tests/xml/53998.xml')
+    root = tree.getroot()
+    return marcalyx.Record(root)
+
+
 def test_leader(kindred):
     assert kindred.leader == '00000cam a2200000Mi 4500'
 
@@ -219,3 +226,18 @@ def test_holdings(binti):
     assert len(holdings) == 1
     assert holdings[0].tag == '880'
     assert holdings[0].value() == '264-00 © 2017'
+
+
+def test_lccn(quilt, kindred):
+    assert quilt.lccn() == "   00010705 "
+    assert kindred.lccn() is None
+    
+
+def test_isbns(kindred):
+    assert isinstance(kindred.isbns(), list)
+    assert kindred.isbns() == ['9781472214812', '1472214811']
+
+
+def test_issns(fissures):
+    assert isinstance(fissures.issns(), list)
+    assert fissures.issns() == ['1572733691 (pbk.)']

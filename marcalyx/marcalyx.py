@@ -121,6 +121,32 @@ class Record(MarcNamespacedElement):
         """Return the holdings, alternate graphics, etc fields (841-88X)"""
 
         return self.tag_range('841', '88X')
+
+
+    def lccn(self):
+        """Return the Library of Congress Control Number.
+
+        Returns the Library of Congress Control Number (010$a). Only returns 
+        the $a subfields, nothing from the $b or $z. Returns None if there is
+        no LCCN in the record."""
+
+        s = self.subfield('010', 'a')
+        if len(s):
+            return s[0].value
+
+        return None
+
+
+    def isbns(self):
+        """Return an array of International Standard Book Numbers (020$a)."""
+
+        return [s.value for s in self.subfield('020', 'a')]
+
+
+    def issns(self):
+        """Return an array of International Standard Serial Numbers (022$a)."""
+
+        return [s.value for s in self.subfield('022', 'a')]
     
     
     def field(self, tag):
