@@ -1,16 +1,8 @@
 import re
 
-SLIM = {'marc': 'http://www.loc.gov/MARC21/slim'}
-class Record:
-    def __init__(self, node):
-        self.node = node
 
-        ns = self.get_namespace(node)
-        
-        self.leader = self.get_leader(node, ns)
-        self.fields = [ControlField(f) for f in self.find_control(node, ns)] + \
-                       [DataField(f, ns) for f in self.find_data(node, ns)]
-
+class MarcNamespacedElement:
+    SLIM = {'marc': 'http://www.loc.gov/MARC21/slim'}
     def get_namespace(self, node):
         ns_search = re.search('({(.+)})?.+', node.tag)
         if ns_search[2] == 'http://www.loc.gov/MARC21/slim':
@@ -21,17 +13,28 @@ class Record:
 
         raise UnrecognizedNamespaceError(ns_search[2])
 
-
     def find_with_ns(self, node, tag, ns):
         if ns:
             ns_str = 'marc:'
         else:
             ns_str = ''
-        return node.findall("%s%s" % (ns_str, tag,), SLIM)
+        return node.findall("%s%s" % (ns_str, tag,), self.SLIM)
             
 
+class Record(MarcNamespacedElement):
+    def __init__(self, node):
+        self.node = node
+
+        ns = self.get_namespace(node)
+        
+        self.leader = self.get_leader(node, ns)
+        self.fields = [ControlField(f) for f in self.find_control(node, ns)] + \
+                       [DataField(f, ns) for f in self.find_data(node, ns)]
+
+
+
     def find_control(self, node, ns):
-        return self.find_with_ns(node, 'controlfield', SLIM)
+        return self.find_with_ns(node, 'controlfield', ns)
 
 
     def find_data(self, node, ns):
@@ -79,7 +82,7 @@ class ControlField:
         return "%s   %s" % (self.tag, self.value,)
 
 
-class DataField:
+class DataField(MarcNamespacedElement):
     def __init__(self, node, ns):
         self.node = node
         self.tag = node.attrib['tag']
@@ -88,13 +91,6 @@ class DataField:
         self.subfields = [SubField(s) for s in
                           self.find_with_ns(node, 'subfield', ns)]
 
-
-    def find_with_ns(self, node, tag, ns):
-        if ns:
-            ns_str = 'marc:'
-        else:
-            ns_str = ''
-        return node.findall("%s%s" % (ns_str, tag,), SLIM)
 
     def subfield(self, code):
         return [s for s in self.subfields if s.code == code]
