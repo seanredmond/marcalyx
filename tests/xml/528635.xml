@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record>
+  <leader>01712cam a22003497a 4500</leader>
+  <controlfield tag="001">   00528635 </controlfield>
+  <controlfield tag="003">DLC</controlfield>
+  <controlfield tag="005">20120327080228.0</controlfield>
+  <controlfield tag="007">hd|afa|||bacp</controlfield>
+  <controlfield tag="007">hd|bfa|||baap</controlfield>
+  <controlfield tag="007">hd|bfa|||babp</controlfield>
+  <controlfield tag="008">000620s1961    dcua    abc   001 0 eng  </controlfield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">   00528635 </subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">DLC</subfield>
+    <subfield code="c">DLC</subfield>
+    <subfield code="d">DLC</subfield>
+  </datafield>
+  <datafield tag="043" ind1=" " ind2=" ">
+    <subfield code="a">e-ur---</subfield>
+  </datafield>
+  <datafield tag="050" ind1="0" ind2="0">
+    <subfield code="a">Microfilm 98/10003</subfield>
+  </datafield>
+  <datafield tag="110" ind1="2" ind2=" ">
+    <subfield code="a">Library of Congress.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Eighteenth century Russian publications in the Library of Congress</subfield>
+    <subfield code="h">[microform] :</subfield>
+    <subfield code="b">a catalog /</subfield>
+    <subfield code="c">prepared by Tatiana Fessenko.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Washington :</subfield>
+    <subfield code="b">Slavic and Central European Division, Reference Dept., Library of Congress,</subfield>
+    <subfield code="c">1961.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">xvi, 157 p. :</subfield>
+    <subfield code="b">ill. ;</subfield>
+    <subfield code="c">26 cm.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Included in microfilm set under title: Eighteenth-century Russian law collection.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Call number of original: Z2502.U5.</subfield>
+    <subfield code="5">DLC</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Microfilm.</subfield>
+    <subfield code="b">Washington, D.C. :</subfield>
+    <subfield code="c">Library of Congress Preservation Microfilming Program :</subfield>
+    <subfield code="c">Available from Library of Congress Photoduplication Service,</subfield>
+    <subfield code="d">2000.</subfield>
+    <subfield code="e">1 microfilm reel ; 35 mm.</subfield>
+    <subfield code="n">Master microform held by: DLC.</subfield>
+  </datafield>
+  <datafield tag="530" ind1=" " ind2=" ">
+    <subfield code="a">Also available in digital form on the Library of Congress Web site.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Russian literature</subfield>
+    <subfield code="y">18th century</subfield>
+    <subfield code="v">Bibliography</subfield>
+    <subfield code="v">Catalogs.</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">Russia</subfield>
+    <subfield code="x">History</subfield>
+    <subfield code="v">Sources</subfield>
+    <subfield code="v">Bibliography</subfield>
+    <subfield code="v">Catalogs.</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">Russia</subfield>
+    <subfield code="x">Politics and government</subfield>
+    <subfield code="y">1689-1801</subfield>
+    <subfield code="v">Sources</subfield>
+    <subfield code="v">Bibliography</subfield>
+    <subfield code="v">Catalogs.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Fessenko, Tatiana Sviatenko,</subfield>
+    <subfield code="d">1915-1995.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Library of Congress.</subfield>
+    <subfield code="b">Slavic and Central European Division.</subfield>
+  </datafield>
+  <datafield tag="776" ind1="1" ind2=" ">
+    <subfield code="c">Original</subfield>
+    <subfield code="w">(DLC)   61060095</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="1">
+    <subfield code="3">PDF</subfield>
+    <subfield code="u">http://hdl.loc.gov/loc.gdc/scd0001.20080317001ei.1</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="1">
+    <subfield code="3">Page view</subfield>
+    <subfield code="u">http://hdl.loc.gov/loc.gdc/scd0001.20080317001ei.2</subfield>
+  </datafield>
+</record>

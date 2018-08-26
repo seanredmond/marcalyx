@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection>
+  <record>
+    <leader>00519nam a22001811  4500</leader>
+    <controlfield tag="001">012279829</controlfield>
+    <controlfield tag="003">MiAaHDL</controlfield>
+    <controlfield tag="005">20110907000000.0</controlfield>
+    <controlfield tag="006">m        d        </controlfield>
+    <controlfield tag="007">cr bn ---auaua</controlfield>
+    <controlfield tag="008">810715t19671962xx            000 0 eng d</controlfield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">sdr-pst.a73140</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)14026028</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">LIAS153848</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">PSt</subfield>
+      <subfield code="c">PSt</subfield>
+      <subfield code="d">WaOLN</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="a">L'Engle, Madeleine.</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="2">
+      <subfield code="a">A wrinkle in time /</subfield>
+      <subfield code="c">Madeleine L'Engle.</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="a">Harmondsworth, Eng. :</subfield>
+      <subfield code="b">Penguin Books,</subfield>
+      <subfield code="c">1967, c1962.</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">184 p. ;</subfield>
+      <subfield code="c">18 cm.</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">"Puffin books".</subfield>
+    </datafield>
+    <datafield tag="538" ind1=" " ind2=" ">
+      <subfield code="a">Mode of access: Internet.</subfield>
+    </datafield>
+    <datafield tag="586" ind1=" " ind2=" ">
+      <subfield code="a">Newbery Medal, 1963.</subfield>
+    </datafield>
+    <datafield tag="CID" ind1=" " ind2=" ">
+      <subfield code="a">012279829</subfield>
+    </datafield>
+    <datafield tag="DAT" ind1="0" ind2=" ">
+      <subfield code="b">20110907000000.0</subfield>
+    </datafield>
+    <datafield tag="DAT" ind1="1" ind2=" ">
+      <subfield code="a">20130416093638.0</subfield>
+      <subfield code="b">2014-11-11T21:21:33Z</subfield>
+    </datafield>
+    <datafield tag="DAT" ind1="2" ind2=" ">
+      <subfield code="a">2014-11-11T21:00:03Z</subfield>
+    </datafield>
+    <datafield tag="CAT" ind1=" " ind2=" ">
+      <subfield code="a">SDR-PST</subfield>
+      <subfield code="d">UNKNOWN</subfield>
+      <subfield code="l">loader.pl-002-002</subfield>
+    </datafield>
+    <datafield tag="FMT" ind1=" " ind2=" ">
+      <subfield code="a">BK</subfield>
+    </datafield>
+    <datafield tag="HOL" ind1=" " ind2=" ">
+      <subfield code="0">sdr-pst.a73140</subfield>
+      <subfield code="a">pst</subfield>
+      <subfield code="b">SDR</subfield>
+      <subfield code="c">PST</subfield>
+      <subfield code="p">pst.000027212882</subfield>
+      <subfield code="s">PST</subfield>
+      <subfield code="z">j</subfield>
+      <subfield code="1">a73140</subfield>
+    </datafield>
+    <datafield tag="974" ind1=" " ind2=" ">
+      <subfield code="b">PST</subfield>
+      <subfield code="c">PST</subfield>
+      <subfield code="d">20141111</subfield>
+      <subfield code="s">google</subfield>
+      <subfield code="u">pst.000027212882</subfield>
+      <subfield code="z">j</subfield>
+      <subfield code="y">1962</subfield>
+      <subfield code="r">ic</subfield>
+      <subfield code="q">bib</subfield>
+    </datafield>
+  </record>
+</collection>

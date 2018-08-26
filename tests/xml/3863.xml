@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record>
+  <leader>00879cam a22002411  4500</leader>
+  <controlfield tag="001">   00003863 </controlfield>
+  <controlfield tag="003">DLC</controlfield>
+  <controlfield tag="005">20050605163616.0</controlfield>
+  <controlfield tag="008">790202s1900    nyu      i    000 0 grc  </controlfield
+  >
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">   00003863 </subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)4613110</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">DLC</subfield>
+    <subfield code="c">CtHT</subfield>
+    <subfield code="d">CtHT</subfield>
+    <subfield code="d">DLC</subfield>
+  </datafield>
+  <datafield tag="042" ind1=" " ind2=" ">
+    <subfield code="a">premarc</subfield>
+  </datafield>
+  <datafield tag="050" ind1="0" ind2="0">
+    <subfield code="a">PA25</subfield>
+    <subfield code="b">.C7 no. 11</subfield>
+  </datafield>
+  <datafield tag="051" ind1=" " ind2=" ">
+    <subfield code="a">PA4499.Z8</subfield>
+    <subfield code="b">M3 1900</subfield>
+    <subfield code="c">Copy 2.</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Lander, Mary Katherine Gloth,</subfield>
+    <subfield code="d">1872-</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Index in Xenophontis Memorabilia,</subfield>
+    <subfield code="c">confecerunt Catharina Maria Gloth, Maria Francisca Kellogg ...</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[New York,</subfield>
+    <subfield code="b">For the University by the Macmillan Company,</subfield>
+    <subfield code="c">1900]</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">v, 96 p.</subfield>
+    <subfield code="c">24 cm.</subfield>
+  </datafield>
+  <datafield tag="490" ind1="1" ind2=" ">
+    <subfield code="a">Cornell studies in classical philology,</subfield>
+    <subfield code="v">no. 11</subfield>
+  </datafield>
+  <datafield tag="600" ind1="0" ind2="0">
+    <subfield code="a">Xenophon.</subfield>
+    <subfield code="t">Memorabilia.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Kellogg, Mary Frances,</subfield>
+    <subfield code="d">1872-</subfield>
+    <subfield code="e">joint author.</subfield>
+  </datafield>
+  <datafield tag="810" ind1="2" ind2=" ">
+    <subfield code="a">Cornell University.</subfield>
+    <subfield code="t">Cornell studies in classical philology ;</subfield>
+    <subfield code="v">no. 11.</subfield>
+  </datafield>
+</record>    

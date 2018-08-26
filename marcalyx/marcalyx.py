@@ -48,10 +48,80 @@ class Record(MarcNamespacedElement):
 
     def mainEntry(self):
         return next(iter(self.tag_range("100", "1XX") or []), None)
+
     
     def titleStatement(self):
         return self.field('245')[0]
 
+    
+    def controlFields(self):
+        return self.tag_range('001', '009')
+
+    def codes(self):
+        """Return the numbers and code fields (01X-09X)."""
+
+        return self.tag_range('010', '09X')
+
+
+    def titles(self):
+        """Return the title- and title-related fields (20X-24X)."""
+
+        return self.tag_range('200', '24X')
+    
+    
+    def edition(self):
+        """Return the edition- and imprint-related fields (25X-28X)."""
+
+        return self.tag_range('250', '28X')
+    
+    
+    def description(self):
+        """Return the physical description fields (3XX)."""
+
+        return self.tag_range('300', '399')
+    
+    
+    def series(self):
+        """Return the series statement fields (4XX)."""
+
+        return self.tag_range('400', '499')
+    
+    
+    def notes(self):
+        """Return the note statement fields (5XX)."""
+
+        return self.tag_range('500', '59X')
+    
+    
+    def subjects(self):
+        """Return the subject access fields (6XX)."""
+
+        return self.tag_range('600', '69X')
+    
+    
+    def addedEntries(self):
+        """Return the added entry fields (70X-75X)."""
+
+        return self.tag_range('700', '75X')
+    
+    
+    def linking(self):
+        """Return the linking entry fields (76X-78X)."""
+
+        return self.tag_range('760', '78X')
+    
+    
+    def seriesAdded(self):
+        """Return the series added entry fields (80X-83X)."""
+
+        return self.tag_range('800', '83X')
+    
+    
+    def holdings(self):
+        """Return the holdings, alternate graphics, etc fields (841-88X)"""
+
+        return self.tag_range('841', '88X')
+    
     
     def field(self, tag):
         return [f for f in self.fields if f.tag == tag]

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record>
+  <leader>00916cam a22002651a 4500</leader>
+  <controlfield tag="001">   00002971 </controlfield>
+  <controlfield tag="003">DLC</controlfield>
+  <controlfield tag="005">20041006095910.0</controlfield>
+  <controlfield tag="008">880506s1900    nyu           000 1 eng  </controlfield
+  >
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">   00002971 </subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)17914886</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">DLC</subfield>
+    <subfield code="c">ScU</subfield>
+    <subfield code="d">DLC</subfield>
+  </datafield>
+  <datafield tag="050" ind1="0" ind2="0">
+    <subfield code="a">PZ3.E43</subfield>
+    <subfield code="b">Si29</subfield>
+    <subfield code="a">PR4670</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Eliot, George,</subfield>
+    <subfield code="d">1819-1880.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Silas Marner :</subfield>
+    <subfield code="b">the weaver of Raveloe,</subfield>
+    <subfield code="c">by George Eliot ; edited with introduction and notes for school use byEdward Everett Hale, jr.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">New York :</subfield>
+    <subfield code="b">University publishing company,</subfield>
+    <subfield code="c">1900.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">xxii, 195 p. ;</subfield>
+    <subfield code="c">19 cm.</subfield>
+  </datafield>
+  <datafield tag="490" ind1="0" ind2=" ">
+    <subfield code="a">Standard literature series ;</subfield>
+    <subfield code="v">no. 43</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Fathers and daughters</subfield>
+    <subfield code="v">Fiction.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Adopted children</subfield>
+    <subfield code="v">Fiction.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Foundlings</subfield>
+    <subfield code="v">Fiction.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Weavers</subfield>
+    <subfield code="v">Fiction.</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">England</subfield>
+    <subfield code="v">Fiction.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Domestic fiction.</subfield>
+    <subfield code="2">lcsh</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Hale, Edward Everett,</subfield>
+    <subfield code="d">1863-1932.</subfield>
+  </datafield>
+</record>
