@@ -1,14 +1,48 @@
+import re
+
 NS = {'marc': 'http://www.loc.gov/MARC21/slim'}
 class Record:
     def __init__(self, node):
         self.node = node
-        self.leader = node.find('marc:leader', NS).text
-        self.fields = [ControlField(f) for f in
-                       node.findall('marc:controlfield', NS)] + \
-                       [DataField(f) for f in
-                       node.findall('marc:datafield', NS)]
+
+        ns = self.get_namespace(node)
+        
+        self.leader = self.get_leader(node, ns)
+        self.fields = [ControlField(f) for f in self.find_control(node, ns)] + \
+                       [DataField(f) for f in self.find_data(node, ns)]
+
+    def get_namespace(self, node):
+        ns_search = re.search('({(.+)})?.+', node.tag)
+        if ns_search[2] == 'http://www.loc.gov/MARC21/slim':
+            return ns_search[2]
+
+        if ns_search[2] is None:
+            return None
+
+        raise UnrecognizedNamespaceError(ns_search[2])
 
 
+    def find_with_ns(self, node, tag, ns):
+        if ns:
+            ns_str = 'marc:'
+        else:
+            ns_str = ''
+        return node.findall("%s%s" % (ns_str, tag,), NS)
+            
+
+    def find_control(self, node, ns):
+        return self.find_with_ns(node, 'controlfield', ns)
+
+
+    def find_data(self, node, ns):
+        return self.find_with_ns(node, 'datafield', ns)
+
+
+    def get_leader(self, node, ns):
+        leader = self.find_with_ns(node, 'leader', ns)
+        return leader[0].text
+
+    
     def titleStatement(self):
         return self.field('245')[0]
 
@@ -75,3 +109,10 @@ class SubField:
 
     def __repr__(self):
         return "$%s%s" % (self.code, self.value,)
+
+
+class UnrecognizedNamespaceError(Exception):
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)    
