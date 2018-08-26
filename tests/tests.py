@@ -15,12 +15,34 @@ def test_fields():
     assert len(ftypes) == 2
     assert marcalyx.marcalyx.ControlField in ftypes
     assert marcalyx.marcalyx.DataField in ftypes
-    
+
+
+def test_subfield():
+    s = r.subfield('650', 'a')
+    assert isinstance(s, list)
+    assert len(s) == 2
+    assert list(set([type(sub) for sub in s])) == [marcalyx.marcalyx.SubField]
+
+
+def test_subfield_when_some_are_empty():
+    # There is one 651 field with an $x and one without
+    s = r.subfield("651", "x")
+    assert isinstance(s, list)
+    assert len(s) == 1
+
+
+def test_subfields_when_all_should_be_empy():
+    s = r.subfield("650", "9")
+    assert isinstance(s, list)
+    assert len(s) == 0
+
+
 def test_getting_a_field():
     f = r.field('245')
     assert isinstance(f, list)
     assert len(f) == 1
     assert f[0].tag == '245'
+
 
 def test_getting_field_by_index():
     assert r.field('245') == r['245']

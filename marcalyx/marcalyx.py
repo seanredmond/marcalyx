@@ -16,6 +16,13 @@ class Record:
     def field(self, tag):
         return [f for f in self.fields if f.tag == tag]
 
+
+    def subfield(self, tag, code):
+        return [g for h in
+                [f.subfield(code) for f in self.field(tag)]
+                for g in h]
+
+
     def __getitem__(self, tag):
         return self.field(tag)
 
@@ -41,6 +48,9 @@ class DataField:
                           node.findall('marc:subfield', NS)]
 
 
+    def subfield(self, code):
+        return [s for s in self.subfields if s.code == code]
+        
     def value(self):
         return ' '.join([s.value for s in self.subfields])
 
