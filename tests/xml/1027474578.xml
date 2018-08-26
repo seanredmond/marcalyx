@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+  <leader>00000cam a2200000Mi 4500</leader>
+  <controlfield tag="001">1027474578</controlfield>
+  <controlfield tag="008">180306r20141979xxk    g      000 j eng d</controlfield>
+  <datafield ind1=" " ind2=" " tag="020">
+    <subfield code="a">9781472214812</subfield>
+  </datafield>
+  <datafield ind1=" " ind2=" " tag="020">
+    <subfield code="a">1472214811</subfield>
+  </datafield>
+  <datafield ind1="1" ind2=" " tag="100">
+    <subfield code="a">Butler, Octavia Estelle</subfield>
+    <subfield code="d">(1947-2006).</subfield>
+    <subfield code="4">aut</subfield>
+  </datafield>
+  <datafield ind1="1" ind2="0" tag="245">
+    <subfield code="a">Kindred /</subfield>
+    <subfield code="c">Octavia E. Butler.</subfield>
+  </datafield>
+  <datafield ind1=" " ind2=" " tag="300">
+    <subfield code="a">1 vol. (295 p.) ;</subfield>
+    <subfield code="c">20 cm.</subfield>
+  </datafield>
+  <datafield ind1=" " ind2="0" tag="650">
+    <subfield code="a">African American women</subfield>
+    <subfield code="x">Fiction.</subfield>
+  </datafield>
+  <datafield ind1=" " ind2="0" tag="650">
+    <subfield code="a">Time travel</subfield>
+    <subfield code="x">Fiction.</subfield>
+  </datafield>
+  <datafield ind1=" " ind2="0" tag="651">
+    <subfield code="a">Southern States</subfield>
+    <subfield code="x">History</subfield>
+    <subfield code="v">Fiction.</subfield>
+  </datafield>
+  <datafield ind1=" " ind2="7" tag="651">
+    <subfield code="a">Southern States.</subfield>
+    <subfield code="2">fast</subfield>
+  </datafield>
+</record>
