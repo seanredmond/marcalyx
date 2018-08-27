@@ -1,1 +1,1 @@
-from .marcalyx import Record, ControlField, DataField
+from .marcalyx import Collection, Record, ControlField, DataField

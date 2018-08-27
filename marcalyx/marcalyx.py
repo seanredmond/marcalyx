@@ -22,6 +22,15 @@ class MarcNamespacedElement:
         return node.findall("%s%s" % (ns_str, tag,), self.SLIM)
 
 
+class Collection(MarcNamespacedElement):
+    def __init__(self, node):
+        self.node = node
+
+    def records(self):
+        return [Record(r) for r in
+                self.find_with_ns(self.node, 'record',
+                                  self.get_namespace(self.node))]
+    
 class Record(MarcNamespacedElement):
     def __init__(self, node):
         self.node = node
