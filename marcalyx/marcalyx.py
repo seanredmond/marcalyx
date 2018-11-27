@@ -6,13 +6,13 @@ class MarcNamespacedElement:
 
     def get_namespace(self, node):
         ns_search = re.search('({(.+)})?.+', node.tag)
-        if ns_search[2] == 'http://www.loc.gov/MARC21/slim':
-            return ns_search[2]
+        if ns_search.group(2) == 'http://www.loc.gov/MARC21/slim':
+            return ns_search.group(2)
 
-        if ns_search[2] is None:
+        if ns_search.group(2) is None:
             return None
 
-        raise UnrecognizedNamespaceError(ns_search[2])
+        raise UnrecognizedNamespaceError(ns_search.group(2))
 
     def find_with_ns(self, node, tag, ns):
         if ns:
