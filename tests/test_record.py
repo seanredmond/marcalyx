@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import marcalyx
 import pytest
 import xml.etree.ElementTree as ET
