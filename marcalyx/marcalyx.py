@@ -173,12 +173,10 @@ class DataField(MarcNamespacedElement):
         self.ind2 = node.attrib['ind2']
         self.subfields = [SubField(s) for s in
                           self.find_with_ns(node, 'subfield', ns)]
+        self.value = ' '.join([s.value for s in self.subfields])
 
     def subfield(self, code):
         return [s for s in self.subfields if s.code == code]
-
-    def value(self):
-        return ' '.join([s.value for s in self.subfields])
 
     def ind_to_s(self, i):
         if i == ' ':

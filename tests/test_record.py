@@ -107,7 +107,8 @@ def test_title_statement(kindred):
 
 
 def test_datafield_value(kindred):
-    assert kindred.titleStatement().value() == 'Kindred / Octavia E. Butler.'
+#    assert kindred.titleStatement().value == 'Kindred / Octavia E. Butler.'
+    assert kindred.titleStatement().value == 'Kindred / Octavia E. Butler.'
 
 
 def test_main_entry(kindred, quilt):
@@ -137,7 +138,7 @@ def test_codes(kindred):
     assert isinstance(codes, list)
     assert len(codes) == 2
     assert codes[0].tag == "020"
-    assert codes[0].value() == '9781472214812'
+    assert codes[0].value == '9781472214812'
 
 
 def test_titles(binti):
@@ -146,8 +147,8 @@ def test_titles(binti):
     assert len(t) == 2
     assert t[0].tag == '245'
     assert t[-1].tag == '246'
-    assert t[0].value() == 'Binti : the night masquerade / Nnedi Okorafor.'
-    assert t[-1].value() == 'Night masquerade'
+    assert t[0].value == 'Binti : the night masquerade / Nnedi Okorafor.'
+    assert t[-1].value == 'Night masquerade'
 
 
 def test_editions(wrinkle):
@@ -155,7 +156,7 @@ def test_editions(wrinkle):
     assert isinstance(edition, list)
     assert len(edition) ==  1
     assert edition[0].tag == '260'
-    assert edition[0].value() == \
+    assert edition[0].value == \
         'Harmondsworth, Eng. : Penguin Books, 1967, c1962.'
 
 
@@ -164,7 +165,7 @@ def test_description(wrinkle):
     assert isinstance(description, list)
     assert len(description) == 1
     assert description[0].tag == '300'
-    assert description[0].value() == '184 p. ; 18 cm.'
+    assert description[0].value == '184 p. ; 18 cm.'
 
 
 def test_series(marner):
@@ -172,7 +173,7 @@ def test_series(marner):
     assert isinstance(series, list)
     assert len(series) == 1
     assert series[0].tag == '490'
-    assert series[0].value() == 'Standard literature series ; no. 43'
+    assert series[0].value == 'Standard literature series ; no. 43'
 
 
 def test_notes(quilt):
@@ -180,7 +181,7 @@ def test_notes(quilt):
     assert isinstance(notes, list)
     assert len(notes) == 3
     assert notes[0].tag == '500'
-    assert notes[0].value() == '"Millennium celebration."'
+    assert notes[0].value == '"Millennium celebration."'
 
 
 def test_subjects(kindred):
@@ -188,7 +189,7 @@ def test_subjects(kindred):
     assert isinstance(subjects, list)
     assert len(subjects) == 4
     assert subjects[0].tag == '650'
-    assert subjects[0].value() == 'African American women Fiction.'
+    assert subjects[0].value == 'African American women Fiction.'
 
 
 def test_added_entries(quilt):
@@ -197,8 +198,8 @@ def test_added_entries(quilt):
     assert len(added) == 2
     assert added[0].tag == '700'
     assert added[-1].tag == '710'
-    assert added[0].value() == 'Browning, Bonnie K., 1944-'
-    assert added[-1].value() == 'American Quilter\'s Society.'
+    assert added[0].value == 'Browning, Bonnie K., 1944-'
+    assert added[-1].value == 'American Quilter\'s Society.'
 
 
 def test_linking(russian):
@@ -206,14 +207,14 @@ def test_linking(russian):
     assert isinstance(links, list)
     assert len(links) == 1
     assert links[0].tag == '776'
-    assert links[0].value() == 'Original (DLC)   61060095'
+    assert links[0].value == 'Original (DLC)   61060095'
 
 
 def test_series_added(xenophon):
     series = xenophon.seriesAdded()
     assert len(series) == 1
     assert series[0].tag == '810'
-    assert series[0].value() == \
+    assert series[0].value == \
         'Cornell University. Cornell studies in classical philology ; no. 11.'
 
 
@@ -221,7 +222,7 @@ def test_holdings(binti):
     holdings = binti.holdings()
     assert len(holdings) == 1
     assert holdings[0].tag == '880'
-    assert holdings[0].value() == u'264-00 © 2017'
+    assert holdings[0].value == u'264-00 © 2017'
 
 
 
