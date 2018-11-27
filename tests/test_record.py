@@ -221,7 +221,8 @@ def test_holdings(binti):
     holdings = binti.holdings()
     assert len(holdings) == 1
     assert holdings[0].tag == '880'
-    assert holdings[0].value() == '264-00 © 2017'
+    assert holdings[0].value() == u'264-00 © 2017'
+
 
 
 def test_lccn(quilt, kindred):
