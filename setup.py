@@ -17,7 +17,7 @@ DESCRIPTION = 'Simple python interface for reading MARC-XML'
 URL = 'https://github.com/seanredmond/marcalyx'
 EMAIL = 'me@example.com'
 AUTHOR = 'Sean Redmond'
-REQUIRES_PYTHON = '>=3.6.0'
+REQUIRES_PYTHON = '>=2.7.0'
 VERSION = None
 
 # What packages are required for this module to be executed?
