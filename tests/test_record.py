@@ -63,20 +63,13 @@ def test_leader(kindred):
     assert kindred.leader == '00000cam a2200000Mi 4500'
 
     
-def test_fields(kindred):
-    f = kindred.fields
-    ftypes = list(set([type(field) for field in kindred.fields]))
-    assert isinstance(f, list)
-    assert len(ftypes) == 2
-    assert marcalyx.marcalyx.ControlField in ftypes
-    assert marcalyx.marcalyx.DataField in ftypes
-
-
 def test_subfield(kindred):
     s = kindred.subfield('650', 'a')
     assert isinstance(s, list)
     assert len(s) == 2
-    assert list(set([type(sub) for sub in s])) == [marcalyx.marcalyx.SubField]
+    assert list(
+        set([isinstance(sub, marcalyx.marcalyx.SubField) for sub in s])
+    ) == [True]
 
 
 def test_subfield_when_some_are_empty(kindred):
@@ -131,8 +124,9 @@ def test_main_entry(kindred, quilt):
 def test_control_fields(kindred):
     ctrl = kindred.controlFields()
     assert isinstance(ctrl, list)
-    assert list(set([type(f) for f in ctrl])) == \
-        [marcalyx.marcalyx.ControlField]
+    assert list(
+        set([isinstance(f, marcalyx.marcalyx.ControlField) for f in ctrl])
+    ) == [True]
     assert len(ctrl) == 2
     assert ctrl[0],tag == '001'
     assert ctrl[-1].tag == '008'

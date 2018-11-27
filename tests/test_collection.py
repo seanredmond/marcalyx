@@ -24,4 +24,6 @@ def test_records(lengle):
     records = lengle.records()
     assert isinstance(records, list)
     assert len(records) == 1
-    assert list(set([type(r) for r in records])) == [marcalyx.marcalyx.Record]
+    assert list(
+        set([isinstance(r, marcalyx.marcalyx.Record) for r in records])
+    ) == [True]
