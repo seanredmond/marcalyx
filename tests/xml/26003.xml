@@ -1,0 +1,46 @@
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <leader> nam 22 3u </leader>
+    <controlfield tag="001">26003</controlfield>
+    <controlfield tag="005">20190206</controlfield>
+    <controlfield tag="007">cuuuu---auuuu</controlfield>
+    <controlfield tag="008">190206s|||| xx o 0 u ||| |</controlfield>
+    <datafield tag="020" ind1=" " ind2=" ">
+        <subfield code="a">9783486702866</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+        <subfield code="a">Kittel, Manfred</subfield>
+        <subfield code="4">aut</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2=" ">
+        <subfield code="a">Nach Nürnberg und Tokio. Vergangenheitsbewältigung in Japan und Westdeutschland 1945 bis 1968</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+        <subfield code="b">De Gruyter</subfield>
+        <subfield code="c">2004</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+        <subfield code="a">1 electronic resource (201 p.)</subfield>
+    </datafield>
+    <datafield tag="520" ind1=" " ind2=" ">
+        <subfield code="a"/>
+    </datafield>
+    <datafield tag="546" ind1=" " ind2=" ">
+        <subfield code="a">German</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+        <subfield code="a">History of Germany</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+        <subfield code="a">Modern history, 1453-</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+        <subfield code="a">Political science (General)</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+        <subfield code="u">https://www.doabooks.org/doab?func=fulltext&amp;rid=26003</subfield>
+        <subfield code="z">Description of rights in Directory of Open Access Books (DOAB): Attribution Non-commercial No Derivatives (CC by-nc-nd)</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+        <subfield code="u">https://doi.org/10.1524/9783486702866</subfield>
+    </datafield>
+</record>
