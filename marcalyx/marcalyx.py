@@ -38,10 +38,11 @@ class Record(MarcNamespacedElement):
         ns = self.get_namespace(node)
 
         self.leader = self.get_leader(node, ns)
-        self.fields = [ControlField(f) for f in
-                       self.find_control(node, ns)] + \
-                      [DataField(f, ns) for f in self.find_data(node, ns)]
-
+        self.fields = list(filter(None,
+            [ControlField(f) for f in self.find_control(node, ns)] + \
+            [DataField(f, ns) for f in self.find_data(node, ns)]
+        ))
+        
     def find_control(self, node, ns):
         return self.find_with_ns(node, 'controlfield', ns)
 
@@ -171,9 +172,13 @@ class DataField(MarcNamespacedElement):
         self.tag = node.attrib['tag']
         self.ind1 = node.attrib['ind1']
         self.ind2 = node.attrib['ind2']
-        self.subfields = [SubField(s) for s in
-                          self.find_with_ns(node, 'subfield', ns)]
-        self.value = ' '.join([s.value for s in self.subfields])
+        self.subfields = [
+            SubField(s) for s in
+            self.find_with_ns(node, 'subfield', ns)
+            if s.text is not None
+        ]
+        self.value = ' '.join([s.value for s in self.subfields]) \
+                      if len(self.subfields) > 0 else None
 
     def subfield(self, code):
         return [s for s in self.subfields if s.code == code]
