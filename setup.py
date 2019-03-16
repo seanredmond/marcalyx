@@ -15,7 +15,7 @@ from setuptools import find_packages, setup, Command
 NAME = 'marcalyx'
 DESCRIPTION = 'Simple python interface for reading MARC-XML'
 URL = 'https://github.com/seanredmond/marcalyx'
-EMAIL = 'me@example.com'
+EMAIL = 'github-sme@sneakemail.com'
 AUTHOR = 'Sean Redmond'
 REQUIRES_PYTHON = '>=2.7.0'
 VERSION = None
