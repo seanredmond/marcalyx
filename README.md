@@ -86,6 +86,11 @@ And subfields, which can be accessed via the `subfield()` method, which returns 
 
     >>> m["245"][0].subfield('a')
     [$aKindred /]
+    
+As with fields, you can get subfields via subscript:
+
+    >>> m["245"][0]['a']
+    [$aKindred /]
 
 ## `value` vs. `str`
 
