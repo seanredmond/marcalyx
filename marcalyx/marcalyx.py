@@ -152,6 +152,10 @@ class Record(MarcNamespacedElement):
         return [f for f in self.fields if f.tag >= first and f.tag <= last]
 
     def __getitem__(self, tag):
+        if isinstance(tag, tuple):
+            return [a for b in [f.subfield(tag[1]) \
+                                for f in self.field(tag[0])] for a in b]
+
         return self.field(tag)
 
 

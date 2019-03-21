@@ -109,6 +109,13 @@ def test_getting_a_field(kindred):
 def test_getting_field_by_index(kindred):
     assert kindred.field('245') == kindred['245']
 
+
+def test_getting_subfield_by_index(kindred):
+    subf = kindred[('650', 'a')]
+    assert isinstance(subf, list)
+    assert len(subf) == 2
+    assert subf[0].value == 'African American women'
+
     
 def test_getting_control_and_data_fields(kindred):
     assert isinstance(kindred['001'][0], marcalyx.marcalyx.ControlField)

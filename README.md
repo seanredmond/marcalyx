@@ -91,6 +91,13 @@ As with fields, you can get subfields via subscript:
 
     >>> m["245"][0]['a']
     [$aKindred /]
+    
+You can use a tuple containing a field tag and subfield code as a subscript to
+get a flat list of all the subfields with that code (if any) of all the fields
+with that tag (if any):
+
+    >>> m[('650','a')]
+    [$aAfrican American women, $aTime travel]
 
 ## `value` vs. `str`
 
