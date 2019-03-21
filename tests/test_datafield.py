@@ -28,6 +28,14 @@ def test_subfields(dataf):
 
 
 def test_subfield(dataf):
-    subf = dataf.subfield('a')[0]
-    assert isinstance(subf, marcalyx.marcalyx.SubField)
-    assert subf.value == 'Butler, Octavia Estelle'
+    subf = dataf.subfield('a')
+    assert isinstance(subf, list)
+    assert isinstance(subf[0], marcalyx.marcalyx.SubField)
+    assert subf[0].value == 'Butler, Octavia Estelle'
+
+
+def test_subfield_getitem(dataf):
+    subf = dataf['a']
+    assert isinstance(subf, list)
+    assert isinstance(subf[0], marcalyx.marcalyx.SubField)
+    assert subf[0].value == 'Butler, Octavia Estelle'

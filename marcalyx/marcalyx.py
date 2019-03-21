@@ -189,6 +189,10 @@ class DataField(MarcNamespacedElement):
 
         return i
 
+    def __getitem__(self, code):
+        return self.subfield(code)
+
+
     def __repr__(self):
         return "%s %s%s%s" % (self.tag,
                               self.ind_to_s(self.ind1),
