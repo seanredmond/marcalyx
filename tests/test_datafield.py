@@ -25,3 +25,9 @@ def test_to_string(dataf):
 def test_subfields(dataf):
     assert isinstance(dataf.subfields, list)
     assert len(dataf.subfields) == 3
+
+
+def test_subfield(dataf):
+    subf = dataf.subfield('a')[0]
+    assert isinstance(subf, marcalyx.marcalyx.SubField)
+    assert subf.value == 'Butler, Octavia Estelle'
